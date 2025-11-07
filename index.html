@@ -11,9 +11,16 @@
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Poppins',sans-serif;background:linear-gradient(180deg,#f8f6f4 0%,#ffffff 100%);color:#111;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 
-    .app{max-width:420px;margin:auto;overflow:hidden;position:relative;min-height:100vh;}
+    .app{max-width:420px;margin:auto;overflow:hidden;position:relative;min-height:100vh;scroll-snap-type:y mandatory;overflow-y:scroll;}
+
+    section{scroll-snap-align:start;min-height:100vh;display:flex;flex-direction:column;justify-content:center;}
 
     .bg-video img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-1}
+
+    .content-top{background:url('https://jemputan.me/images/upload/design/1723691062_FLO102_Cover.png') center/cover no-repeat;border-radius:20px;box-shadow:0 8px 20px rgba(0,0,0,0.08);padding:80px 20px;margin:40px 20px;text-align:center;backdrop-filter:blur(4px)}
+    .content-top h1,.content-top h2{font-family:'Playfair Display',serif}
+    .content-top h1{font-size:18px;margin-bottom:8px;letter-spacing:1px;font-weight:400;color:#000;opacity:0.9;position:relative;top:-10px;text-shadow:none}
+    .content-top h2{font-size:36px;margin:4px 0;font-weight:700;letter-spacing:1px;color:#cc5500;text-shadow:2px 2px 4px rgba(0,0,0,0.4)}
 
     .content{background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);border-radius:16px;padding:24px;box-shadow:0 8px 20px rgba(0,0,0,0.05);position:relative;z-index:2;margin:20px;}
 
@@ -45,63 +52,73 @@
 </head>
 <body>
   <div class="app">
-    <div class="bg-video">
-      <img src="https://aliveinvite.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdVlCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--12b4513c1d33489fa5e3a25c2fb0a368bfd0b4b5/CLIFFORD-BG.png" alt="Wedding Background" />
-    </div>
-
-    <div class="content">
-      <p>Assalamualaikum &amp; Salam Sejahtera</p>
-      <div class="parent-name">HJ. MOHD SHUHAIMI BIN DAUD</div>
-      <div class="parent-name">&amp;</div>
-      <div class="parent-name">HJH. NOR AZILA BINTI RAMLI</div>
-
-      <p>Dengan penuh kesyukuran kami menjemput,<br>Dato’ | Datin | Tuan | Puan | Encik | Cik<br>ke majlis perkahwinan puteri kami</p>
-
-      <div class="couple-name">SITI ISMAHANI IZZATI BINTI MOHD SHUHAIMI</div>
-      <div class="parent-name">&amp;</div>
-      <div class="couple-name">MUHAMMAD FIKRI BIN ZUHAIRI</div>
-
-      <div style="display:flex;justify-content:center;gap:8px">
-        <button id="toggleDetails" class="btn">Butiran</button>
-        <button class="btn ghost" id="openRsvp">RSVP</button>
+    <section>
+      <div class="bg-video">
+        <img src="https://aliveinvite.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdVlCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--12b4513c1d33489fa5e3a25c2fb0a368bfd0b4b5/CLIFFORD-BG.png" alt="Wedding Background" />
       </div>
+      <div class="content-top">
+        <h1>WALIMATULURUS</h1>
+        <h2>ISMA</h2>
+        <h2>&amp;</h2>
+        <h2>FIKRI</h2>
+      </div>
+    </section>
 
-      <div id="detailsPanel" class="slide" aria-hidden="true">
-        <h2>Butiran Majlis</h2>
-        <p><strong>Tarikh:</strong> Sabtu, 03 Januari 2026<br><strong>Masa:</strong> 11:00 pagi - 4:00 petang<br><strong>Tempat:</strong> White House Event Space Dungun</p>
+    <section>
+      <div class="content">
+        <p>Assalamualaikum &amp; Salam Sejahtera</p>
+        <div class="parent-name">HJ. MOHD SHUHAIMI BIN DAUD</div>
+        <div class="parent-name">&amp;</div>
+        <div class="parent-name">HJH. NOR AZILA BINTI RAMLI</div>
 
-        <h2>Atur Cara | Itinerary</h2>
-        <p><strong>Jamuan:</strong> 11.00 AM – 4.00 PM<br><strong>Ketibaan Pengantin:</strong> 12.00 PM</p>
+        <p>Dengan penuh kesyukuran kami menjemput,<br>Dato’ | Datin | Tuan | Puan | Encik | Cik<br>ke majlis perkahwinan puteri kami</p>
 
-        <h2>Galeri</h2>
-        <div class="grid">
-          <img src="https://i.postimg.cc/3RRKKKHH/265f0c1f-9af7-4fb7-956d-50d064a0eba4.jpg" alt="1">
-          <img src="https://i.postimg.cc/KcP9ZtJy/A24C2718-C6BC-4653-B516-9741E7B213BF-1-105-c.jpg" alt="2">
-          <img src="https://i.postimg.cc/T1VPHTMh/8EC8700E-DA47-4FF0-9F84-2FCE47B1A986-1-105-c.jpg" alt="3">
+        <div class="couple-name">SITI ISMAHANI IZZATI BINTI MOHD SHUHAIMI</div>
+        <div class="parent-name">&amp;</div>
+        <div class="couple-name">MUHAMMAD FIKRI BIN ZUHAIRI</div>
+
+        <div style="display:flex;justify-content:center;gap:8px">
+          <button id="toggleDetails" class="btn">Butiran</button>
+          <button class="btn ghost" id="openRsvp">RSVP</button>
         </div>
+
+        <div id="detailsPanel" class="slide" aria-hidden="true">
+          <h2>Butiran Majlis</h2>
+          <p><strong>Tarikh:</strong> Sabtu, 03 Januari 2026<br><strong>Masa:</strong> 11:00 pagi - 4:00 petang<br><strong>Tempat:</strong> White House Event Space Dungun</p>
+
+          <h2>Atur Cara | Itinerary</h2>
+          <p><strong>Jamuan:</strong> 11.00 AM – 4.00 PM<br><strong>Ketibaan Pengantin:</strong> 12.00 PM</p>
+
+          <h2>Galeri</h2>
+          <div class="grid">
+            <img src="https://i.postimg.cc/3RRKKKHH/265f0c1f-9af7-4fb7-956d-50d064a0eba4.jpg" alt="1">
+            <img src="https://i.postimg.cc/KcP9ZtJy/A24C2718-C6BC-4653-B516-9741E7B213BF-1-105-c.jpg" alt="2">
+            <img src="https://i.postimg.cc/T1VPHTMh/8EC8700E-DA47-4FF0-9F84-2FCE47B1A986-1-105-c.jpg" alt="3">
+          </div>
+        </div>
+
+        <h2>Lokasi</h2>
+        <p>White House Event Space, Dungun</p>
+        <div style="display:flex;gap:8px;justify-content:center;margin-top:8px">
+          <a href="https://maps.app.goo.gl/Z2F3c86dVen1ciR29" class="btn" style="flex:1;max-width:200px"><i class="fa-solid fa-map-location-dot"></i> Google Maps</a>
+          <a href="https://waze.com/ul?ll=4.7576,103.4039&navigate=yes" class="btn ghost" style="flex:1;max-width:200px"><i class="fa-brands fa-waze"></i> Waze</a>
+        </div>
+
+        <h2>Hashtag Rasmi</h2>
+        <h1 style="font-size:20px">#IsmaFikri2026</h1>
+        <a href="#" class="btn" id="addCal">Tambah ke Kalendar</a>
+
+        <h2>COUNTING DAYS</h2>
+        <div class="countdown" id="countdown">
+          <div><div class="num" id="days">0</div><div class="lbl">Hari</div></div>
+          <div><div class="num" id="hours">0</div><div class="lbl">Jam</div></div>
+          <div><div class="num" id="mins">0</div><div class="lbl">Minit</div></div>
+          <div><div class="num" id="secs">0</div><div class="lbl">Saat</div></div>
+        </div>
+
+        <footer>Terima kasih — Kami hargai kehadiran dan doa anda.</footer>
       </div>
-
-      <h2>Lokasi</h2>
-      <p>White House Event Space, Dungun</p>
-      <div style="display:flex;gap:8px;justify-content:center;margin-top:8px">
-        <a href="https://maps.app.goo.gl/Z2F3c86dVen1ciR29" class="btn" style="flex:1;max-width:200px"><i class="fa-solid fa-map-location-dot"></i> Google Maps</a>
-        <a href="https://waze.com/ul?ll=4.7576,103.4039&navigate=yes" class="btn ghost" style="flex:1;max-width:200px"><i class="fa-brands fa-waze"></i> Waze</a>
-      </div>
-
-      <h2>Hashtag Rasmi</h2>
-      <h1 style="font-size:20px">#IsmaFikri2026</h1>
-      <a href="#" class="btn" id="addCal">Tambah ke Kalendar</a>
-
-      <h2>COUNTING DAYS</h2>
-      <div class="countdown" id="countdown">
-        <div><div class="num" id="days">0</div><div class="lbl">Hari</div></div>
-        <div><div class="num" id="hours">0</div><div class="lbl">Jam</div></div>
-        <div><div class="num" id="mins">0</div><div class="lbl">Minit</div></div>
-        <div><div class="num" id="secs">0</div><div class="lbl">Saat</div></div>
-      </div>
-
-      <footer>Terima kasih — Kami hargai kehadiran dan doa anda.</footer>
-    </div>
+    </section>
   </div>
 
   <script>
