@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <title>Jemputan Perkahwinan — Isma & Fikri</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root{--accent:#a67c52;--muted:#6b7280;--glass:rgba(255,255,255,0.75)}
     *{box-sizing:border-box;margin:0;padding:0}
@@ -12,7 +13,7 @@
 
     .app{max-width:420px;margin:auto;overflow:hidden;position:relative;min-height:100vh;}
 
-    .bg-video video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-1}
+    .bg-video iframe{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-1;border:0}
 
     .content{background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);border-radius:16px;padding:24px;box-shadow:0 8px 20px rgba(0,0,0,0.05);position:relative;z-index:2;margin:20px;}
 
@@ -21,8 +22,10 @@
     h2{font-size:18px;font-weight:600;color:var(--accent);margin:16px 0 8px;text-align:center}
     p{font-size:15px;color:#222;line-height:1.6;margin-bottom:8px;text-align:center}
 
-    .btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 20px;border-radius:12px;font-weight:600;text-decoration:none;margin:6px;text-align:center;border:none}
+    .btn{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:#fff;padding:12px 20px;border-radius:12px;font-weight:600;text-decoration:none;margin:6px;text-align:center;border:none;transition:0.2s}
+    .btn i{font-size:18px}
     .btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+    .btn:hover{opacity:0.9}
 
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px}
     .grid img{width:100%;height:90px;object-fit:cover;border-radius:8px}
@@ -31,8 +34,6 @@
     .countdown div{background:#f1f1f1;padding:8px 10px;border-radius:8px;min-width:54px}
     .countdown .num{font-weight:700;font-size:16px}
     .countdown .lbl{font-size:11px;color:var(--muted)}
-
-    iframe.map{width:100%;height:180px;border:0;border-radius:10px;margin-top:10px}
 
     footer{font-size:12px;color:var(--muted);margin-top:20px;text-align:center}
 
@@ -45,10 +46,7 @@
 <body>
   <div class="app">
     <div class="bg-video">
-      <video autoplay loop muted playsinline>
-        <source src="https://static.vecteezy.com/system/resources/previews/028/726/445/mp4/wedding-backdrop-flower-wedding-decoration-beautiful-flowers-free-video.mp4" type="video/mp4">
-        Video tidak disokong dalam pelayar anda.
-      </video>
+      <iframe src="https://www.youtube.com/embed/Nlp6FN-mizI?autoplay=1&mute=1&loop=1&playlist=Nlp6FN-mizI&controls=0&modestbranding=1&showinfo=0" allow="autoplay; fullscreen" allowfullscreen></iframe>
     </div>
 
     <div class="content">
@@ -84,10 +82,11 @@
       </div>
 
       <h2>Lokasi</h2>
-      <p>Tekan butang arah untuk buka aplikasi navigasi.</p>
-      <iframe class="map" src="https://www.google.com/maps?q=https://maps.app.goo.gl/Z2F3c86dVen1ciR29&output=embed" allowfullscreen></iframe>
-      <a href="https://maps.app.goo.gl/Z2F3c86dVen1ciR29" class="btn">Arah (Google Maps)</a>
-      <a href="https://waze.com/ul?ll=4.7576,103.4039&navigate=yes" class="btn ghost">Buka Waze</a>
+      <p>White House Event Space, Dungun</p>
+      <div style="display:flex;gap:8px;justify-content:center;margin-top:8px">
+        <a href="https://maps.app.goo.gl/Z2F3c86dVen1ciR29" class="btn" style="flex:1;max-width:200px"><i class="fa-solid fa-map-location-dot"></i> Google Maps</a>
+        <a href="https://waze.com/ul?ll=4.7576,103.4039&navigate=yes" class="btn ghost" style="flex:1;max-width:200px"><i class="fa-brands fa-waze"></i> Waze</a>
+      </div>
 
       <h2>Hashtag Rasmi</h2>
       <h1 style="font-size:20px">#IsmaFikri2026</h1>
