@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Jemputan Perkahwinan — Isma & Fikri</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--accent:#a67c52;--muted:#6b7280;--glass:rgba(255,255,255,0.75)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Poppins',sans-serif;background:linear-gradient(180deg,#f8f6f4 0%,#ffffff 100%);color:#111;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+    .app{max-width:420px;margin:auto;overflow:hidden;position:relative;min-height:100vh;}
+
+    .bg-video iframe{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-1}
+
+    .content{background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);border-radius:16px;padding:24px;box-shadow:0 8px 20px rgba(0,0,0,0.05);position:relative;z-index:2;margin:20px;}
+
+    .parent-name,.couple-name{font-family:'Playfair Display',serif;font-size:18px;color:#2b2b2b;margin-bottom:8px;text-align:center}
+
+    h2{font-size:18px;font-weight:600;color:var(--accent);margin:16px 0 8px;text-align:center}
+    p{font-size:15px;color:#222;line-height:1.6;margin-bottom:8px;text-align:center}
+
+    .btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 20px;border-radius:12px;font-weight:600;text-decoration:none;margin:6px;text-align:center;border:none}
+    .btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px}
+    .grid img{width:100%;height:90px;object-fit:cover;border-radius:8px}
+
+    .countdown{display:flex;justify-content:center;gap:8px;margin-top:12px}
+    .countdown div{background:#f1f1f1;padding:8px 10px;border-radius:8px;min-width:54px}
+    .countdown .num{font-weight:700;font-size:16px}
+    .countdown .lbl{font-size:11px;color:var(--muted)}
+
+    iframe.map{width:100%;height:180px;border:0;border-radius:10px;margin-top:10px}
+
+    footer{font-size:12px;color:var(--muted);margin-top:20px;text-align:center}
+
+    #detailsPanel{display:none;margin-top:12px;text-align:left}
+    #detailsPanel.open{display:block}
+
+    .slide{transition:all .28s ease}
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="bg-video">
+      <iframe src="https://player.vimeo.com/video/1037622862?background=1&autoplay=1&loop=1&muted=1" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="content">
+      <p>Assalamualaikum &amp; Salam Sejahtera</p>
+      <div class="parent-name">HJ. MOHD SHUHAIMI BIN DAUD</div>
+      <div class="parent-name">&amp;</div>
+      <div class="parent-name">HJH. NOR AZILA BINTI RAMLI</div>
+
+      <p>Dengan penuh kesyukuran kami menjemput,<br>Dato’ | Datin | Tuan | Puan | Encik | Cik<br>ke majlis perkahwinan puteri kami</p>
+
+      <div class="couple-name">SITI ISMAHANI IZZATI BINTI MOHD SHUHAIMI</div>
+      <div class="parent-name">&amp;</div>
+      <div class="couple-name">MUHAMMAD FIKRI BIN ZUHAIRI</div>
+
+      <div style="display:flex;justify-content:center;gap:8px">
+        <button id="toggleDetails" class="btn">Butiran</button>
+        <button class="btn ghost" id="openRsvp">RSVP</button>
+      </div>
+
+      <div id="detailsPanel" class="slide" aria-hidden="true">
+        <h2>Butiran Majlis</h2>
+        <p><strong>Tarikh:</strong> Sabtu, 03 Januari 2026<br><strong>Masa:</strong> 11:00 pagi - 4:00 petang<br><strong>Tempat:</strong> White House Event Space Dungun</p>
+
+        <h2>Atur Cara | Itinerary</h2>
+        <p><strong>Jamuan:</strong> 11.00 AM – 4.00 PM<br><strong>Ketibaan Pengantin:</strong> 12.00 PM</p>
+
+        <h2>Galeri</h2>
+        <div class="grid">
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80" alt="1">
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80" alt="2">
+          <img src="https://images.unsplash.com/photo-1524503033411-c9566986fc8f?q=80" alt="3">
+        </div>
+      </div>
+
+      <h2>Lokasi</h2>
+      <p>Tekan butang arah untuk buka aplikasi navigasi.</p>
+      <iframe class="map" src="https://www.google.com/maps?q=https://maps.app.goo.gl/Z2F3c86dVen1ciR29&output=embed" allowfullscreen></iframe>
+      <a href="https://maps.app.goo.gl/Z2F3c86dVen1ciR29" class="btn">Arah (Google Maps)</a>
+      <a href="https://waze.com/ul?ll=4.7576,103.4039&navigate=yes" class="btn ghost">Buka Waze</a>
+
+      <h2>Hashtag Rasmi</h2>
+      <h1 style="font-size:20px">#IsmaFikri2026</h1>
+      <a href="#" class="btn" id="addCal">Tambah ke Kalendar</a>
+
+      <h2>COUNTING DAYS</h2>
+      <div class="countdown" id="countdown">
+        <div><div class="num" id="days">0</div><div class="lbl">Hari</div></div>
+        <div><div class="num" id="hours">0</div><div class="lbl">Jam</div></div>
+        <div><div class="num" id="mins">0</div><div class="lbl">Minit</div></div>
+        <div><div class="num" id="secs">0</div><div class="lbl">Saat</div></div>
+      </div>
+
+      <footer>Terima kasih — Kami hargai kehadiran dan doa anda.</footer>
+    </div>
+  </div>
+
+  <div class="music">
+    <button id="toggleMusic">♪</button>
+    <audio id="bgAudio" loop src=""></audio>
+  </div>
+
+  <script>
+    function pad(n){return String(n).padStart(2,'0')}
+    const eventDate=new Date('2026-01-03T11:00:00+08:00');
+    function tick(){const now=new Date();let diff=Math.max(0,Math.floor((eventDate-now)/1000));const d=Math.floor(diff/86400);diff%=86400;const h=Math.floor(diff/3600);diff%=3600;const m=Math.floor(diff/60);const s=diff%60;document.getElementById('days').textContent=d;document.getElementById('hours').textContent=pad(h);document.getElementById('mins').textContent=pad(m);document.getElementById('secs').textContent=pad(s);}tick();setInterval(tick,1000);
+
+    const toggle=document.getElementById('toggleDetails');
+    const details=document.getElementById('detailsPanel');
+    toggle.addEventListener('click',()=>{
+      const isOpen = details.classList.toggle('open');
+      details.setAttribute('aria-hidden', !isOpen);
+      if(isOpen) details.scrollIntoView({behavior:'smooth',block:'center'});
+    });
+  </script>
+</body>
+</html>
