@@ -12,7 +12,7 @@
 
     .app{max-width:420px;margin:auto;overflow:hidden;position:relative;min-height:100vh;}
 
-    .bg-video iframe{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-1}
+    .bg-video video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-1}
 
     .content{background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);border-radius:16px;padding:24px;box-shadow:0 8px 20px rgba(0,0,0,0.05);position:relative;z-index:2;margin:20px;}
 
@@ -45,7 +45,10 @@
 <body>
   <div class="app">
     <div class="bg-video">
-      <iframe src="https://player.vimeo.com/video/1037622862?background=1&autoplay=1&loop=1&muted=1" frameborder="0" allowfullscreen></iframe>
+      <video autoplay loop muted playsinline>
+        <source src="https://static.vecteezy.com/system/resources/previews/028/726/445/mp4/wedding-backdrop-flower-wedding-decoration-beautiful-flowers-free-video.mp4" type="video/mp4">
+        Video tidak disokong dalam pelayar anda.
+      </video>
     </div>
 
     <div class="content">
@@ -100,11 +103,6 @@
 
       <footer>Terima kasih — Kami hargai kehadiran dan doa anda.</footer>
     </div>
-  </div>
-
-  <div class="music">
-    <button id="toggleMusic">♪</button>
-    <audio id="bgAudio" loop src=""></audio>
   </div>
 
   <script>
